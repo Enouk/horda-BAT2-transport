@@ -39,7 +39,7 @@ classify:
 	  examples/$(NAME)/models/alexnet/caffe_alexnet_train_iter_300.caffemodel \
 	  examples/$(NAME)/data/mean.binaryproto \
 	  examples/$(NAME)/models/alexnet/labels.txt \
-	  examples/$(NAME)/data/images/bad-image0013.jpg
+	  examples/$(NAME)/data/images/good-image0181.jpg
 
 rel:
 	rm -rf $(RELEASE_DIR);

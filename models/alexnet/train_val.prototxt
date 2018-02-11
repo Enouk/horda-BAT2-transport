@@ -34,11 +34,19 @@ layer {
   include {
     phase: TEST
   }
+  # mean pixel / channel-wise mean instead of mean image
   transform_param {
-    mirror: false
     crop_size: 227
-    mean_file: "examples/horda-transport-caffe-model/data/mean.binaryproto" # MODIFIED
+    mean_value: 104
+    mean_value: 117
+    mean_value: 123
+    mirror: false
   }
+#  transform_param {
+#    mirror: false
+#    crop_size: 227
+#    mean_file: "examples/horda-transport-caffe-model/data/mean.binaryproto" # MODIFIED
+#  }
   data_param {
     source: "examples/horda-transport-caffe-model/db/val_lmdb" # MODIFIED
     batch_size: 10
